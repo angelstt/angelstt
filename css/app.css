@@ -1,0 +1,61 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+section h2::after {
+    display: flex;
+    border: 1px solid #333;
+    content: "";
+    margin: 1rem auto 0 auto;
+    width: 5rem;
+}
+
+h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4, h5, h6 {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button:focus {
+    box-shadow: none !important;
+}
+
+/* Navbar */
+
+.logo {
+    height: 3rem;
+}
+
+.bg-custom {
+    background-color: #153AE0 !important;
+    padding-bottom: 0.6rem;
+    opacity: 0.9;
+}
