@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 800;
 }
 
@@ -48,6 +48,62 @@ button:focus {
     box-shadow: none !important;
 }
 
+#backToTopBtn {
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    z-index: 200;
+}
+
+.btn-float {
+    position: fixed;
+    left: 2.5rem;
+    z-index: 200;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+}
+
+.btn-llamar {
+    bottom: 6rem;
+    background-color: #FFF;
+}
+
+.btn-llamar .bi.bi-telephone-fill {
+    font-size: 1.5rem;
+}
+
+.btn-mensaje {
+    bottom: 2.3rem;
+    background-color: #25D366;
+    color: #FFF;
+}
+
+.btn-mensaje .bi.bi-whatsapp {
+    font-size: 1.5rem;
+}
+
+.btn-secondary {
+    background-color: #153AE0;
+    opacity: 0.9;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #5975f2;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    bottom: 50%;
+    width: 10%;
+    cursor: pointer;
+}
+
+.bi-2x {
+    font-size: 2rem;
+    line-height: 0.75rem;
+}
+
 /* Navbar */
 
 .logo {
@@ -58,4 +114,91 @@ button:focus {
     background-color: #153AE0 !important;
     padding-bottom: 0.6rem;
     opacity: 0.9;
+}
+
+/* Home */
+
+#home img {
+    object-fit: cover;
+}
+
+#home h1 {
+    position: relative;
+    animation: caption-animated 1s;
+}
+
+@keyframes caption-animated {
+    0% { top: 100%; }
+    100% { top: 0; }
+}
+
+.caption-1 {
+    top: 40%;
+}
+
+.caption-2 {
+    top: 40%;
+}
+
+/* About */
+
+#about p {
+    text-align: justify;
+}
+
+#about img {
+    border: 3px double;
+}
+
+.rounded-about {
+    border-radius: 3rem;
+}
+
+/* Services */
+
+#services {
+    background-image: linear-gradient(#12B2E2, #E9E9E9);
+}
+
+#services .card-text {
+    text-align: justify;
+}
+
+@media (992px <= width <= 1200px) {
+    #services h3 {
+        font-size: 1.4rem;
+    }
+
+    #services .card-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Contact */
+
+.emails-contact {
+    word-wrap: break-word;
+}
+
+/* Footer */
+
+footer {
+    background-color: #323232;
+    color: #FFF;
+}
+
+footer li {
+    list-style: none;
+}
+
+.logo-footer {
+    height: 15rem;
+}
+
+.link-footer a {
+    color: #65AFFF;
+}
+
+.link-footer a:hover {
+    color: #4C92DD;
 }
