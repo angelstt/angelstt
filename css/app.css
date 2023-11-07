@@ -196,9 +196,17 @@ footer li {
 }
 
 .link-footer a {
-    color: #65AFFF;
+    color: #47A0FF;
 }
 
 .link-footer a:hover {
-    color: #4C92DD;
+    color: #0A81FF;
+}
+
+.bi-instagram {
+  color: #47A0FF;
+}
+
+.bi-instagram:hover {
+  color: #0A81FF;
 }
