@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Linotte";
+    src: url("../fonts/Linotte Semi Bold.otf");
+}
+
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -64,15 +69,6 @@ button:focus {
     padding: 0.3rem 0.6rem 0.3rem 0.6rem;
 }
 
-.btn-llamar {
-    bottom: 6rem;
-    background-color: #FFF;
-}
-
-.btn-llamar .bi.bi-telephone-fill {
-    font-size: 1.5rem;
-}
-
 .btn-mensaje {
     bottom: 2.3rem;
     background-color: #25D366;
@@ -84,12 +80,12 @@ button:focus {
 }
 
 .btn-secondary {
-    background-color: #153AE0;
+    background-color: #12B2E2;
     opacity: 0.9;
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
-    background-color: #5975f2;
+    background-color: #0D91B9;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -106,14 +102,25 @@ button:focus {
 
 /* Navbar */
 
+#listMenu {
+    font-weight: bold;
+}
+
 .logo {
-    height: 3rem;
+    font-family: "Linotte", sans-serif;
+    text-decoration: none;
+    font-size: 2.25rem;
+}
+
+.logo:hover {
+    text-decoration: none;
 }
 
 .bg-custom {
-    background-color: #153AE0 !important;
+    background-color: #12B2E2 !important;
     padding-bottom: 0.6rem;
     opacity: 0.9;
+    height: 4rem;
 }
 
 /* Home */
@@ -160,17 +167,27 @@ button:focus {
     background-image: linear-gradient(#12B2E2, #E9E9E9);
 }
 
+#services img:hover {
+    opacity: 0.8;
+}
+
 #services .card-text {
     text-align: justify;
 }
 
-@media (992px <= width <= 1200px) {
+@media (1200px <= width < 1400px) {
     #services h3 {
         font-size: 1.4rem;
     }
 
     #services .card-text {
         font-size: 0.8rem;
+    }
+}
+
+@media (width < 768px) {
+    #services img {
+        border-bottom-left-radius: 0 !important;
     }
 }
 
@@ -204,9 +221,9 @@ footer li {
 }
 
 .bi-instagram {
-  color: #47A0FF;
+    color: #47A0FF;
 }
 
 .bi-instagram:hover {
-  color: #0A81FF;
+    color: #0A81FF;
 }
