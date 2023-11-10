@@ -55,14 +55,14 @@ button:focus {
 
 #backToTopBtn {
     position: fixed;
-    right: 2.5rem;
-    bottom: 2.5rem;
+    left: 50%;
+    bottom: 1.2rem;
     z-index: 200;
 }
 
 .btn-float {
     position: fixed;
-    left: 2.5rem;
+    right: 2.5rem;
     z-index: 200;
     border: 1px solid;
     border-radius: 50%;
