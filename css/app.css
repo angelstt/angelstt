@@ -37,7 +37,11 @@ h3 {
     font-size: 1.5rem;
 }
 
-h4, h5, h6 {
+h4 {
+    font-size: 1.25rem;
+}
+
+h5, h6 {
     font-size: 1rem;
 }
 
@@ -195,6 +199,40 @@ button:focus {
     word-wrap: break-word;
 }
 
+/* Reviews */
+
+#reviews {
+    background-color: #E9E9E9;
+}
+
+#reviews i {
+    color: #FBBC04;
+}
+
+#reviews .review-text {
+    font-size: 0.9rem;
+    text-align: justify;
+    height: 5rem;
+}
+
+@media (992px <= width < 1200px) {
+    #reviews .review-text {
+        height: 3.5rem;
+    }
+}
+
+@media (768px <= width < 992px) {
+    #reviews .review-text {
+        height: 4rem;
+    }
+}
+
+@media (width < 768px) {
+    #reviews .review-text {
+        height: 3.5rem;
+    }
+}
+
 /* Footer */
 
 footer {
@@ -206,8 +244,12 @@ footer li {
     list-style: none;
 }
 
+#ratingStars i {
+    color: #FBBC04;
+}
+
 .logo-footer {
-    height: 15rem;
+    height: 11.4rem;
 }
 
 .link-footer a {

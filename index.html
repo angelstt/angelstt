@@ -39,6 +39,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Quienes somos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                        <li id="itemMenuReviews" class="nav-item"><a class="nav-link" href="#reviews">Opiniones</a></li>
                     </ul>
                 </div>
             </div>
@@ -184,19 +185,42 @@
                     </div>
                 </div>
                 <div class="row">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13137.019008842955!2d-58.3811276!3d-34.5977191!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb8e45f93543%3A0xb55c19b2846fe677!2sANGELS%20Transfers%20%26%20Tours!5e0!3m2!1ses-419!2sar!4v1698869986300!5m2!1ses-419!2sar" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13137.019008842955!2d-58.3811276!3d-34.5977191!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb8e45f93543%3A0xb55c19b2846fe677!2sANGELS!5e0!3m2!1ses-419!2sar!4v1699992095159!5m2!1ses-419!2sar" width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="container-fluid pb-4 pt-4" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="text-center mb-4">
+                            <h2>Opiniones</h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="listReviews" class="row"></div>
             </div>
         </section>
     </main>
 
-    <footer class="pb-2 pt-4">
+    <footer class="pb-3 pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-12">
-                    <img class="logo-footer mb-3" src="img/logo.png" alt="Angels">
+                    <img class="logo-footer mb-1" src="img/logo.png" alt="Angels">
+                    <div id="rating" style="display: none;">
+                        <p class="mb-1"><strong>Opiniones</strong></p>
+                        <div class="d-flex">
+                            <p id="ratingNumber"></p>
+                            <ul id="ratingStars" class="list-unstyled d-flex ms-2"></ul>
+                            <p class="link-footer ms-2">
+                                <a id="userRatingCount" href="https://search.google.com/local/reviews?placeid=ChIJQzX5RY7LvJURd-ZvhLIZXLU&q=ANGELS&hl=es&gl=419" target="_blank" rel="noopener noreferrer"></a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-3 col-12">
                     <h3 class="mb-3"><strong>Información</strong></h3>
                     <p>Para comunicarse con nosotros:</p>
                     <p><strong>Cel: </strong>+54 9 11 5756-3385</p>
@@ -207,17 +231,20 @@
                     </p>
                     <p><strong>Dirección:</strong><br>Carlos Pellegrini y Paraguay, CABA</p>
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-3 col-12">
                     <p class="mb-1"><strong>Seguinos en Instagram:</strong></p>
                     <p><a href="https://www.instagram.com/angels.transfers" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="bi bi-instagram bi-2x"></i></a></p>
                     <p class="mb-1"><strong>Trabaja con nosotros:</strong></p>
                     <ul class="ps-0 mb-4 link-footer">
-                        <li><a href="mailto:reservas@angelstt.com;" title="Enviar email">Proveedores</a></li>
-                        <li><a href="mailto:reservas@angelstt.com;" title="Enviar email">Afiliados</a></li>
-                        <li><a href="mailto:reservas@angelstt.com;" title="Enviar email">Agencias de Viajes</a></li>
+                        <li><a href="mailto:reservas@angelstt.com?subject=Trabaja con nosotros - Proveedores;" title="Enviar email">Proveedores</a></li>
+                        <li><a href="mailto:reservas@angelstt.com?subject=Trabaja con nosotros - Afiliados;" title="Enviar email">Afiliados</a></li>
+                        <li><a href="mailto:reservas@angelstt.com?subject=Trabaja con nosotros - Agencias de Viajes;" title="Enviar email">Agencias de Viajes</a></li>
                         <li><a href="https://wa.me/+5491157563385" target="_blank" rel="noopener noreferrer" title="Enviar mensaje">Alojamientos</a></li>
                         <li><a href="https://wa.me/+5491157563385" target="_blank" rel="noopener noreferrer" title="Enviar mensaje">Choferes c/ Auto</a></li>
                     </ul>
+                </div>
+                <div class="col-md-2 col-sm-6 col-12">
+                    <div><script>function loadScript(url, callback){var script=document.createElement('script');script.type='text/javascript';if (script.readyState){script.onreadystatechange=function(){if (script.readyState=='loaded' || script.readyState=='complete'){script.onreadystatechange=null; callback();}};}else{script.onload=function(){callback();};}script.src=url; document.getElementsByTagName('head')[0].appendChild(script);}loadScript('https://www.civitatis.com/f/js/vendor/iframeResizer.min.js', function(){iFrameResize({checkOrigin:false,initCallback:function(iframe){setTimeout(function(){var resizeEvent = window.document.createEvent('UIEvents');resizeEvent.initUIEvent('resize', true, false, window, 0);iframe.dispatchEvent(resizeEvent);});}},'#civitatis-ly4z5')})</script><iframe id="civitatis-ly4z5" class="civitatis-iframe" src="https://www.civitatis.com/es/provider-rating-widget/?typeSelection=rating&display=03&providerId=bnU2d3RXakhzaEhTcTBZSmFIeUhCQT09OjozaXFVQzJXd3NM&lang=es" width="123" frameborder="0" data-maxwidth="100%"></iframe></div>
                 </div>
             </div>
         </div>
