@@ -227,9 +227,15 @@ button:focus {
     }
 }
 
-@media (width < 768px) {
+@media (376px <= width < 768px) {
     #reviews .review-text {
         height: 3.5rem;
+    }
+}
+
+@media (width < 376px) {
+    #reviews .review-text {
+        height: 5rem;
     }
 }
 
