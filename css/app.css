@@ -104,6 +104,15 @@ button:focus {
     line-height: 0.75rem;
 }
 
+.bi-8x {
+    font-size: 8rem;
+    line-height: 0.75rem;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
 /* Navbar */
 
 #listMenu {
@@ -272,4 +281,18 @@ footer li {
 
 .bi-instagram:hover {
     color: #0A81FF;
+}
+
+.line-height-custom {
+    line-height: 1.7rem;
+}
+
+@media (min-width: 768px) {
+    .ps-04-custom {
+        padding-left: 0.4rem;
+    }
+
+    .ps-0-custom {
+        padding-left: 0;
+    }
 }

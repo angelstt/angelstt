@@ -6,6 +6,10 @@ function backToTop() {
     });
 }
 
+function showElement(elem) {
+    $(elem).show();
+}
+
 function initGoogleData() {
     $.ajax({
         url: URL_PLACES,
@@ -17,8 +21,6 @@ function initGoogleData() {
             $("#reviews").show();
         },
         error: function (result) {
-            console.log("initGoogleData error:");
-            console.log(result);
             $("#itemMenuReviews").hide();
         }
     });
@@ -39,13 +41,13 @@ function getStars(starsCount) {
 }
 
 function getReviewTemplate() {
-    return '<div class="col-xl-3 col-lg-6 col-md-6 col-12 mt-3"><div class="card"><div class="card-body"><div class="d-flex justify-content-center mb-2">REVIEW_IMG</div><h4 class="card-title">REVIEW_NAME</h4><p class="card-text review-text mb-2">REVIEW_TEXT</p><ul class="list-unstyled d-flex justify-content-center m-0">REVIEW_STARS</ul><p class="card-text"><small class="text-body-secondary">REVIEW_PUBLISH_TIME</small></p></div></div></div>';
+    return '<div class="col-xl-3 col-lg-6 col-md-6 col-12 mt-3"><div class="card"><div class="card-body"><div class="d-flex justify-content-center mb-2">REVIEW_IMG</div><h4 class="card-title">REVIEW_NAME</h4><p class="card-text review-text mb-2">REVIEW_TEXT</p><div class="d-flex justify-content-center mb-2"><p class="m-0"><small>REVIEW_RATING</small></p><ul class="list-unstyled d-flex justify-content-center ms-2 m-0">REVIEW_STARS</ul></div><p class="card-text"><small class="text-muted">REVIEW_PUBLISH_TIME</small></p></div></div></div>';
 }
 
 function getStarsCount(ratingNumber) {
     let starsFill = parseInt(ratingNumber);
     let starsHalf = 0;
-    let ratingHalfNumber = parseFloat((ratingNumber - starsFill).toFixed(2));
+    let ratingHalfNumber = parseFloat((ratingNumber - starsFill).toFixed(1));
     if (ratingHalfNumber > 0.2 && ratingHalfNumber < 0.8) {
         starsHalf = 1;
     } else if (ratingHalfNumber >= 0.8) {
@@ -69,6 +71,7 @@ function getReviews(reviews) {
             reviewText += "...";
         }
         review = review.replace("REVIEW_TEXT", '"' + reviewText + '"');
+        review = review.replace("REVIEW_RATING", parseFloat(item.rating).toFixed(1));
         review = review.replace("REVIEW_STARS", getStars(getStarsCount(item.rating)));
         review = review.replace("REVIEW_PUBLISH_TIME", item.relativePublishTimeDescription);
         $("#listReviews").append(review);
